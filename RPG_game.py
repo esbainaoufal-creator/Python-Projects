@@ -24,11 +24,15 @@ while True:
 
     if Goblen_health <= 0:
         print("The goblen is dead! You won!!")
+        with open("RPG_Progress.txt", "w") as f :
+                f.write(name + " You Won! You killed the Goblen!")  
         break
 
     if health <= 0:
         print("You are dead! Game over!!")
         player_alive = False
+        with open("RPG_Progress.txt", "w") as f :
+                f.write(name + " You lost! The goblen killed you!")  
         break
 
 if player_alive:
@@ -62,9 +66,15 @@ if player_alive:
                 print("You lost in the desert and died from starvation and thirst")
         if Orc_health <= 0:
             print("The Orc is dead! You won!!")
+            with open("RPG_Progress.txt", "w") as f :
+                f.write(name + " You won! You killed the Orc!")  
             break
 
         if health <= 0:
             print("You are dead! Game over!!")
             player_alive = False
+            with open("RPG_Progress.txt", "w") as f :
+                f.write(name + " You lost! The Orc killed you!")  
             break   
+        
+ 
