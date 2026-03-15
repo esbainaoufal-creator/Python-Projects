@@ -13,8 +13,11 @@ while True:
                 streak += 1
                 if streak == 1 :
                     print("Good Job! your streak is now  : " + str(streak) + " day!")
-                
+               
                 else:
                     print("Good Job! your streak is now : " + str(streak) + " days!")
+            else:
+                 print("Insert a valid input!")
+                 continue
             with open("progress.txt", "w") as f :
                 f.write(str(streak))
